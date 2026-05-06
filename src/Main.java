@@ -4,20 +4,21 @@ public class Main {
     public static void main(String[] args){
 
         Scanner sc = new Scanner(System.in);
-        int n1, n2;
+        int h1, h2;
+        int htotal;
 
-        System.out.println("Leia n1:");
-        n1 =sc.nextInt();
+        System.out.println("Leia Horario do inicio:");
+        h1 =sc.nextInt();
 
-        System.out.println("Leia n2:");
-        n2 =sc.nextInt();
+        System.out.println("Leia Horario do final:");
+        h2 =sc.nextInt();
 
-        if (n1 % n2 ==0 || n2 % n1==0)
-            System.out.println("Os numeros são multiplos");
+        htotal = (h2 - h1);
 
-        else
-            System.out.println("Os numeros não são multiplos");
+                if (htotal <= 0)
+                htotal = htotal +24;
 
-        sc.close();
+
+        System.out.println ("O jogo durou " + htotal + " horas");
     }
 }
